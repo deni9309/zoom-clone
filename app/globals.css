@@ -82,41 +82,6 @@
   }
 }
 
-@layer utilities {
-
-  .flex-center {
-    @apply flex justify-center items-center;
-  }
-
-  .flex-between {
-    @apply flex justify-between items-center;
-  }
-
-  .global-sidebar {
-    @apply sticky flex flex-col justify-between left-0 top-0 w-fit h-screen bg-dark-1 p-6 pt-28 text-white max-sm:hidden lg:w-[264px];
-  }
-}
-
-/* ======== animation ======== */
-.show-block {
-  width: 100%;
-  max-width: 350px;
-  display: block;
-  animation: show 0.7s forwards linear;
-}
-
-@keyframes show {
-  0% {
-    animation-timing-function: ease-in;
-    width: 0%;
-  }
-
-  100% {
-    animation-timing-function: ease-in;
-    width: 100%;
-  }
-}
-
 /* ======== stream css overrides ======== */
 .str-video__call-stats {
   max-width: 500px;
@@ -164,6 +129,9 @@
 }
 
 /* ==== clerk class override ===== */
+.cl-providerIcon__github{
+  filter: invert(1);
+}
 
 .cl-userButtonPopoverActionButtonIcon {
   color: white;
@@ -189,5 +157,39 @@
 .cl-userButtonPopoverActionButton {
   color: white;
 }
-
 /* =============================== */
+
+@layer utilities {
+
+  .flex-center {
+    @apply flex justify-center items-center;
+  }
+
+  .flex-between {
+    @apply flex justify-between items-center;
+  }
+
+  .global-sidebar {
+    @apply sticky flex flex-col justify-between left-0 top-0 w-fit h-screen bg-dark-1 p-6 pt-28 text-white max-sm:hidden lg:w-[264px];
+  }
+}
+
+/* ======== animation ======== */
+.show-block {
+  width: 100%;
+  max-width: 350px;
+  display: block;
+  animation: show 0.7s forwards linear;
+}
+
+@keyframes show {
+  0% {
+    animation-timing-function: ease-in;
+    width: 0%;
+  }
+
+  100% {
+    animation-timing-function: ease-in;
+    width: 100%;
+  }
+}
