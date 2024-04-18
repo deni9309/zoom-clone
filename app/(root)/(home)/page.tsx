@@ -10,7 +10,7 @@ const Home = () => {
     <section className="flex flex-col gap-10 size-full text-white">
       {/* ========= Date Time Section ========== */}
       <div className="w-full h-[300px] rounded-[20px] bg-hero bg-cover">
-        <div className="flex flex-col justify-between h-full max-md:px-5 max-md:py-8 lg:p-11">
+        <div className="flex flex-col justify-between h-full max-md:px-5 max-md:py-8 lg:p-11 p-10">
           <h2 className="glassmorphism max-w-[270px] text-center text-base font-normal rounded py-2">Upcoming Meeting at: 12:30 PM</h2>
           <div className="flex flex-col gap-2">
             <h1 className="text-4xl lg:text-7xl font-extrabold">{time}</h1>
