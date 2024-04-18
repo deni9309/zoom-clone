@@ -1,7 +1,7 @@
 import React from 'react';
 import Image from "next/image";
 
-import { Dialog, DialogContent, DialogDescription, DialogHeader, DialogTitle, DialogTrigger } from "./ui/dialog";
+import { Dialog, DialogContent} from "./ui/dialog";
 import { cn } from "@/lib/utils";
 import { Button } from "./ui/button";
 

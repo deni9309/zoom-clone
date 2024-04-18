@@ -1,17 +1,20 @@
 'use client';
 import React, { useState } from 'react';
+import { useRouter } from "next/navigation";
 
 import HomeCard from "./HomeCard";
-import { useRouter } from "next/navigation";
 import MeetingModal from "./MeetingModal";
 
 const MeetingTypeList = () => {
   const [meetingState, setMeetingState] =
     useState<'isScheduleMeeting' | 'isJoiningMeeting' | 'isInstantMeeting' | undefined>();
+
   const router = useRouter();
 
-  const createMeeting = () => { };
-  
+  const createMeeting = () => { 
+    
+  };
+
   return (
     <section className="grid grid-cols-1 md:grid-cols-2 xl:grid-cols-4 gap-5">
       <HomeCard
