@@ -34,7 +34,7 @@ const MeetingCard = ({
           </div>
         </div>
       </article>
-      <article className={cn('relative flex justify-center', {})}>
+      <article className='relative flex justify-center'>
         <div className="relative flex w-full max-sm:hidden">
           {avatarImages.map((img, index) => (
             <Image key={index}
@@ -50,7 +50,7 @@ const MeetingCard = ({
             +5
           </div>
         </div>
-        
+
         {!isPreviousMeeting && (
           <div className="flex gap-2">
             <Button className="rounded bg-blue-1 px-6"
