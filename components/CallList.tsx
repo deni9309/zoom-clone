@@ -81,7 +81,7 @@ const CallList = ({ type }: CallListProps) => {
           title={
             (meeting as Call).state?.custom?.description ||
             (meeting as CallRecording).filename ||
-            'No description'
+            'Personal Meeting'
           }
           date={
             (meeting as Call).state?.startsAt?.toLocaleString() ||

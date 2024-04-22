@@ -9,6 +9,7 @@ import HomeCard from "./HomeCard";
 import MeetingModal from "./MeetingModal";
 import { useToast } from "./ui/use-toast";
 import { Textarea } from "./ui/textarea";
+import { Input } from "./ui/input";
 
 const MeetingTypeList = () => {
   const router = useRouter();
@@ -146,6 +147,25 @@ const MeetingTypeList = () => {
         buttonText="Start Meeting"
         handleClick={createMeeting}
       />
+
+      {/* =========== JOIN MEETING VIA LINK =========== */}
+      <MeetingModal
+        isOpen={meetingState === 'isJoiningMeeting'}
+        onClose={() => setMeetingState(undefined)}
+        title="Paste the link here"
+        className="text-center"
+        buttonText="Join Meeting"
+        handleClick={() => router.push(values.link)}
+      >
+        <div className="flex flex-col gap-2.5">
+          <Input
+            placeholder="Meeting Link..."
+            className="border-none bg-dark-3 focus-visible:ring-0 focus-visible:ring-offset-0"
+            onChange={(e) => { setValues({ ...values, link: e.target.value }); }}
+          />
+        </div>
+
+      </MeetingModal>
     </section>
   );
 };
